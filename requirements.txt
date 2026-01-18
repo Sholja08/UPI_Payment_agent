@@ -1,0 +1,10 @@
+fastmcp
+langchain-core==1.1.3
+langchain-mcp
+requests
+pydantic
+uvicorn
+langgraph
+colorama
+langchain_openai
+langchain_mcp_adapters
