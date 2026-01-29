@@ -66,7 +66,7 @@ def get_transaction_details(
                 "transactions": []
             }
 
-        print(f"\n🔍 TRANSACTION SEARCH:")
+        print(f"\n TRANSACTION SEARCH:")
         print(f"   Total transactions: {len(all_transactions)}")
         print(f"   Filters:")
         print(f"     - Date: {date}")
@@ -107,7 +107,7 @@ def get_transaction_details(
                     txn for txn in filtered
                     if txn.get("time") and time_close(txn["time"])
                 ]
-                print(f"   ✓ After time filter (±30 min): {len(filtered)}")
+                print(f"    After time filter (±30 min): {len(filtered)}")
                             
             except Exception as e:
                 print(f"    Time parsing error: {e}")
@@ -117,7 +117,7 @@ def get_transaction_details(
                 txn for txn in filtered
                 if abs(txn.get("amount", 0) - amount) <= 50
             ]
-            print(f"   ✓ After amount filter (±50): {len(filtered)}")
+            print(f"    After amount filter (±50): {len(filtered)}")
 
         # Limit results
         filtered = filtered[:last_n]
@@ -236,3 +236,4 @@ if __name__ == "__main__":
     print()
     
     mcp.run(transport="streamable-http")
+
